@@ -23,17 +23,12 @@
       /* PC端样式 */
       @media screen and (min-width: 1024px) {
         .container {
-          width: 980px;
+          width: 980px; /* 修复单位错误，并添加分号 */
         }
       }
 
       body {
         background-color: black;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        height: 100vh;
       }
 
       h1 {
@@ -41,35 +36,49 @@
       }
 
       p {
-        color: rgb(11, 134, 124);
+        color: aqua;
       }
 
       .red-text {
-        color: red;
+        color: red; /* 新增类选择器 */
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex; /* 使用flex布局 */
+        flex-direction: row; /* 横向排列 */
+        height: 100vh; /* 设置页面高度为视口高度 */
       }
 
       .section {
-        flex: 1;
+        flex: 1; /* 每个部分平分宽度 */
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        flex-direction: column; /* 垂直排列内容 */
+        justify-content: flex-start; /* 内容从顶部开始 */
+        align-items: center; /* 内容水平居中 */
         color: white;
         font-size: 20px;
         font-family: Arial, sans-serif;
       }
 
       .section img {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* 图片与下方内容的间距 */
       }
 
-      .aliceblue-link {
-        color: aliceblue;
-        text-decoration: none; /* 去掉下划线 */
+      .section:nth-child(1) {
+        background-color: #4caf50; /* 第一部分背景色 */
       }
 
-      .aliceblue-link:hover {
-        text-decoration: underline; /* 鼠标悬停时显示下划线 */
+      .section:nth-child(2) {
+        background-color: #2196f3; /* 第二部分背景色 */
+      }
+
+      .section:nth-child(3) {
+        background-color: #ff9800; /* 第三部分背景色 */
+      }
+
+      .section:nth-child(4) {
+        background-color: #f44336; /* 第四部分背景色 */
       }
     </style>
   </head>
@@ -81,40 +90,21 @@
         width="160"
         height="120"
       />
-      <p>部分 1</p>
-      <a
-        class="aliceblue-link"
-        href="https://github.com/YT-Advanced/WSA-Script"
-        title="wsa"
+      <a href="https://github.com/YT-Advanced/WSA-Script" title="wsa"
         >wsa-script</a
       ><br />
-      <a
-        class="aliceblue-link"
-        href="https://github.com/agefanscom/website"
-        title="网站汇总"
+      <a href="https://github.com/agefanscom/website" title="网站汇总"
         >AGE动漫</a
       ><br />
-      <a
-        class="aliceblue-link"
-        href="https://github.com/ririv/QuickOutline"
-        title="PDF书签工具"
+      <a href="https://github.com/ririv/QuickOutline" title="PDF书签工具"
         >QuickOutline</a
       ><br />
-      <a
-        class="aliceblue-link"
-        href="https://github.com/tiann/KernelSU"
-        title="KSU"
-        >KernelSU</a
-      ><br />
-      <a class="aliceblue-link" href="https://mcarc.github.io/" title="国际服"
-        >我的世界版本库</a
-      ><br />
-      <a
-        class="aliceblue-link"
-        href="https://yweiwu30.github.io/PixivID/"
-        title="查询图片"
+      <a href="https://github.com/tiann/KernelSU" title="KSU">KernelSU</a><br />
+      <a href="https://mcarc.github.io/" title="国际服">我的世界版本库</a><br />
+      <a href="https://yweiwu30.github.io/PixivID/" title="查询图片"
         >pixiv图片查询</a
       >
+      <p>部分 1</p>
     </div>
     <div class="section">
       <img
