@@ -5,43 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>收藏的网站</title>
     <style>
-      @media (max-width: 600px) {
-        body {
-          flex-direction: column; /* 纵向排列内容 */
-        }
-      
-        .section {
-          flex-direction: column; /* 纵向排列内容 */
-          align-items: flex-start; /* 左对齐 */
-          padding: 10px;
-        }
-      
-        .section p {
-          font-size: 16px;
-        }
-      
-        .section img {
-          width: 100%;
-          height: auto;
-          margin-bottom: 5px;
-        }
-      
-        .aliceblue-link {
-          font-size: 14px;
-          margin-bottom: 3px;
-        }
-      }
+      /* 默认样式：横向分割 */
       body {
         background-color: black;
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: row; /* 横向排列 */
+        flex-direction: row; /* 默认横向排列 */
         height: 100vh;
       }
-    
+
       .section {
-        flex: 1;
+        flex: 1; /* 默认等比例分配宽度 */
         display: flex;
         flex-direction: column; /* 垂直排列内容 */
         justify-content: flex-start; /* 从顶部开始 */
@@ -51,23 +26,36 @@
         font-family: Arial, sans-serif;
         padding: 20px;
       }
-    
+
       .section p {
         color: rgb(11, 134, 124); /* 设置段落文字颜色 */
       }
-    
+
       .section img {
         margin-bottom: 10px; /* 图片与下方内容的间距 */
       }
-    
+
       .aliceblue-link {
         color: aliceblue;
         text-decoration: none; /* 去掉下划线 */
         margin-bottom: 5px; /* 添加链接之间的间距 */
       }
-    
+
       .aliceblue-link:hover {
         text-decoration: underline; /* 鼠标悬停时显示下划线 */
+      }
+
+      /* 手机设备样式：纵向分割 */
+      @media (max-width: 600px) {
+        body {
+          flex-direction: column; /* 改为纵向排列 */
+        }
+
+        .section {
+          flex: none; /* 取消等比例分配宽度 */
+          width: 100%; /* 每个部分占满宽度 */
+          padding: 10px; /* 添加内边距 */
+        }
       }
     </style>
   </head>
@@ -92,18 +80,15 @@
         title="背诵单词"
         >背诵单词</a
       >
+      <a class="aliceblue-link" href="https://yrqc.cn/login" title="在线学习"
+        >一日千词</a
+      >
       <a
         class="aliceblue-link"
-        href="https://yrqc.cn/login"
-        title="在线学习"
-        >一日千词
-      </a>
-      <a class="aliceblue-link"
-         href="https://www.crxsoso.com/search?keyword=track&store=chrome"
-         title="浏览器插件"
-         >浏览器插件</a
+        href="https://www.crxsoso.com/search?keyword=track&store=chrome"
+        title="浏览器插件"
+        >浏览器插件</a
       >
-      
       <a
         class="aliceblue-link"
         href="https://yweiwu30.github.io/PixivID/"
@@ -164,10 +149,7 @@
         title="alist"
         >AI工具整合资源站</a
       >
-      <a
-        class="aliceblue-link"
-        href="https://mcarc.github.io/"
-        title="国际服"
+      <a class="aliceblue-link" href="https://mcarc.github.io/" title="国际服"
         >我的世界版本库</a
       >
       <a
@@ -188,9 +170,6 @@
         title="手机os"
         >MIUI官方ROM</a
       >
-      <a class="aliceblue-link"
-      href="https://sourceforge.net/projects/nikgapps/"
-       title="nikgapps">nikgapps</a>
     </div>
     <div class="section">
       <img
@@ -206,31 +185,30 @@
         title="C语言中文网"
         >C语言中文网</a
       >
-      <a
-        class="aliceblue-link"
-        href="https://www.runoob.com/"
-        title="菜鸟教程"
+      <a class="aliceblue-link" href="https://www.runoob.com/" title="菜鸟教程"
         >菜鸟教程</a
       >
-      <a class="aliceblue-link" 
-      href="https://www.w3cschool.cn/"
-       title="w3c"
-       >w3c</a
-       >
-       <a class="aliceblue-link"
-       href="https://developer.mozilla.org/zh-CN/"
-       title="MDN"
-       >MDN</a
-       >
-       <a class="aliceblue-link"
-       href="https://man.ilovefishc.com/css3/"
-       title="CSS3">CSS3</a>
-     <a class="aliceblue-link
-     href="https://python3webspider.cuiqingcai.com/"
-     title="Python3网络爬虫开发实战"
-     >Python3网络爬虫</a>
-
-
+      <a class="aliceblue-link" href="https://www.w3cschool.cn/" title="w3c"
+        >w3c</a
+      >
+      <a
+        class="aliceblue-link"
+        href="https://developer.mozilla.org/zh-CN/"
+        title="MDN"
+        >MDN</a
+      >
+      <a
+        class="aliceblue-link"
+        href="https://man.ilovefishc.com/css3/"
+        title="CSS3"
+        >CSS3</a
+      >
+      <a
+        class="aliceblue-link"
+        href="https://python3webspider.cuiqingcai.com/"
+        title="Python3网络爬虫开发实战"
+        >Python3网络爬虫</a
+      >
     </div>
   </body>
 </html>
