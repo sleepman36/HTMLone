@@ -7,15 +7,40 @@
     />
     <title>收藏的链接</title>
     <style>
+      /* 手机端样式 */
+      @media screen and (max-width: 767px) {
+        .container {
+          width: 100%;
+          padding: 10px;
+        }
+      }
+
+      /* 平板样式 */
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .container {
+          width: 750px;
+        }
+      }
+
+      /* PC端样式 */
+      @media screen and (min-width: 1024px) {
+        .container {
+          width: 980px; /* 修复单位错误，并添加分号 */
+        }
+      }
+
       body {
         background-color: black;
       }
+
       h1 {
         color: aliceblue;
       }
+
       p {
         color: aqua;
       }
+
       .red-text {
         color: red; /* 新增类选择器 */
       }
