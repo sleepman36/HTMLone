@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>横向分割页面</title>
+    <style>
+      /* 手机端样式 */
+      @media screen and (max-width: 767px) {
+        .container {
+          width: 100%;
+          padding: 10px;
+        }
+      }
+
+      /* 平板样式 */
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        .container {
+          width: 750px;
+        }
+      }
+
+      /* PC端样式 */
+      @media screen and (min-width: 1024px) {
+        .container {
+          width: 980px; /* 修复单位错误，并添加分号 */
+        }
+      }
+
+      body {
+        background-color: black;
+      }
+
+      h1 {
+        color: aliceblue;
+      }
+
+      p {
+        color: aqua;
+      }
+
+      .red-text {
+        color: red; /* 新增类选择器 */
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex; /* 使用flex布局 */
+        flex-direction: row; /* 横向排列 */
+        height: 100vh; /* 设置页面高度为视口高度 */
+      }
+
+      .section {
+        flex: 1; /* 每个部分平分宽度 */
+        display: flex;
+        flex-direction: column; /* 垂直排列内容 */
+        justify-content: flex-start; /* 内容从顶部开始 */
+        align-items: center; /* 内容水平居中 */
+        color: white;
+        font-size: 20px;
+        font-family: Arial, sans-serif;
+      }
+
+      .section img {
+        margin-bottom: 10px; /* 图片与下方内容的间距 */
+      }
+
+      .section:nth-child(1) {
+        background-color: #4caf50; /* 第一部分背景色 */
+      }
+
+      .section:nth-child(2) {
+        background-color: #2196f3; /* 第二部分背景色 */
+      }
+
+      .section:nth-child(3) {
+        background-color: #ff9800; /* 第三部分背景色 */
+      }
+
+      .section:nth-child(4) {
+        background-color: #f44336; /* 第四部分背景色 */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="section">
+      <img
+        src="https://images.steamusercontent.com/ugc/1709664318114271880/26B1ADD49692AFB1516AC9B3E78CC5A3CC73B85B/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+        alt="icon1"
+        width="160"
+        height="120"
+      />
+      <a href="https://github.com/YT-Advanced/WSA-Script" title="wsa"
+        >wsa-script</a
+      ><br />
+      <a href="https://github.com/agefanscom/website" title="网站汇总"
+        >AGE动漫</a
+      ><br />
+      <a href="https://github.com/ririv/QuickOutline" title="PDF书签工具"
+        >QuickOutline</a
+      ><br />
+      <a href="https://github.com/tiann/KernelSU" title="KSU">KernelSU</a><br />
+      <a href="https://mcarc.github.io/" title="国际服">我的世界版本库</a><br />
+      <a href="https://yweiwu30.github.io/PixivID/" title="查询图片"
+        >pixiv图片查询</a
+      >
+      <p>部分 1</p>
+    </div>
+    <div class="section">
+      <img
+        src="https://images.steamusercontent.com/ugc/2407824359573840725/C9FE4026ED3724062C279B834F7B4B2BB81DCE92/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+        alt="icon2"
+        width="160"
+        height="120"
+      />
+      <p>部分 2</p>
+    </div>
+    <div class="section">
+      <img
+        src="https://images.steamusercontent.com/ugc/5114432630426325462/CBB55D65B9B8CA4E062B471D92CA16776041234D/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+        alt="icon3"
+        width="160"
+        height="120"
+      />
+      <p>部分 3</p>
+    </div>
+    <div class="section">
+      <img
+        src="https://images.steamusercontent.com/ugc/2385305186017039453/3E787736DDD47B6E0FFA4A214792BF76710CF0AC/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"
+        alt="icon4"
+        width="160"
+        height="120"
+      />
+      <p>部分 4</p>
+    </div>
+  </body>
+</html>
