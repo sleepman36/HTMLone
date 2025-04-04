@@ -5,67 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>横向分割页面</title>
     <style>
-      /* 手机端样式 */
-      @media screen and (max-width: 767px) {
-        .container {
-          width: 100%;
-          padding: 10px;
-        }
-      }
-
-      /* 平板样式 */
-      @media screen and (min-width: 768px) and (max-width: 1023px) {
-        .container {
-          width: 750px;
-        }
-      }
-
-      /* PC端样式 */
-      @media screen and (min-width: 1024px) {
-        .container {
-          width: 980px;
-        }
-      }
-
       body {
         background-color: black;
         margin: 0;
         padding: 0;
         display: flex;
-        flex-direction: row;
+        flex-direction: row; /* 横向排列 */
         height: 100vh;
-      }
-
-      h1 {
-        color: aliceblue;
-      }
-
-      p {
-        color: rgb(11, 134, 124);
-      }
-
-      .red-text {
-        color: red;
       }
 
       .section {
         flex: 1;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
+        flex-direction: column; /* 垂直排列内容 */
+        justify-content: flex-start; /* 从顶部开始 */
+        align-items: center; /* 水平居中 */
         color: white;
         font-size: 20px;
         font-family: Arial, sans-serif;
+        padding: 20px;
       }
 
       .section img {
-        margin-bottom: 10px;
+        margin-bottom: 10px; /* 图片与下方内容的间距 */
       }
 
       .aliceblue-link {
         color: aliceblue;
         text-decoration: none; /* 去掉下划线 */
+        margin-bottom: 5px; /* 添加链接之间的间距 */
       }
 
       .aliceblue-link:hover {
@@ -87,25 +55,25 @@
         href="https://github.com/agefanscom/website"
         title="网站汇总"
         >AGE动漫网址</a
-      ><br />
-      <a class="aliceblue-link
-          href="https://typing-word.ttentau.top/#/practice"
-          title="背诵单词"
-            >背诵单词</a><br />
+      >
+      <a
+        class="aliceblue-link"
+        href="https://typing-word.ttentau.top/#/practice"
+        title="背诵单词"
+        >背诵单词</a
+      >
       <a
         class="aliceblue-link"
         href="https://yweiwu30.github.io/PixivID/"
         title="查询图片"
         >pixiv图片查询</a
       >
-        <br />  
-        <a
+      <a
         class="aliceblue-link"
         href="https://mirai.mamoe.net/"
         title="mirai机器人"
         >mirai机器人</a
-      ><//a>
-        </a>
+      >
     </div>
     <div class="section">
       <img
@@ -116,23 +84,23 @@
       />
       <p>Github</p>
       <a
-      class="aliceblue-link"
-      href="https://github.com/YT-Advanced/WSA-Script"
-      title="wsa"
-      >wsa-script</a
-    ><br />
+        class="aliceblue-link"
+        href="https://github.com/YT-Advanced/WSA-Script"
+        title="wsa"
+        >wsa-script</a
+      >
       <a
         class="aliceblue-link"
         href="https://github.com/ririv/QuickOutline"
         title="PDF书签工具"
         >QuickOutline</a
-      ><br />
+      >
       <a
         class="aliceblue-link"
         href="https://github.com/tiann/KernelSU"
         title="KSU"
         >KernelSU</a
-      ><br />      
+      >
     </div>
     <div class="section">
       <img
@@ -142,30 +110,42 @@
         height="120"
       />
       <p>下载资源</p>
-      <a class="aliceblue-link
-         href="https://msdn.itellyou.cn/Windows"
-         title="msdn"
-          >windows镜像</a>
-      <br />
+      <a
+        class="aliceblue-link"
+        href="https://msdn.itellyou.cn/Windows"
+        title="msdn"
+        >windows镜像</a
+      >
       <a
         class="aliceblue-link"
         href="http://fh.drgondal.xyz:5244/AI/stable%20diffusion%E7%A7%8B%E5%8F%B6%E6%95%B4%E5%90%88%E5%8C%85"
         title="alist"
         >AI工具整合资源站</a
-      ><br />
-      <a class="aliceblue-link" href="https://mcarc.github.io/" title="国际服"
+      >
+      <a
+        class="aliceblue-link"
+        href="https://mcarc.github.io/"
+        title="国际服"
         >我的世界版本库</a
-      ><br />
-      <a class="aliceblue-link" href="https://www.arrowos.net/download" 
-       title="手机OS">arrowos</a
-    ><br />
-    <a class="aliceblue-link" href="https://download.lineageos.org.cn/" 
-    title="手机os">lineageos</a
- ><br />
-    <a class="aliceblue-link" href="https://xiaomirom.com/series/" 
-    title="手机os">MIUI官方ROM</a
- ><br /><//a>
-    </a>
+      >
+      <a
+        class="aliceblue-link"
+        href="https://www.arrowos.net/download"
+        title="手机OS"
+        >arrowos</a
+      >
+      <a
+        class="aliceblue-link"
+        href="https://download.lineageos.org.cn/"
+        title="手机os"
+        >lineageos</a
+      >
+      <a
+        class="aliceblue-link"
+        href="https://xiaomirom.com/series/"
+        title="手机os"
+        >MIUI官方ROM</a
+      >
     </div>
     <div class="section">
       <img
@@ -174,25 +154,13 @@
         width="160"
         height="120"
       />
-      
-      
-      
       <p>交流学习</p>
       <a
         class="aliceblue-link"
         href="https://c.biancheng.net/"
         title="C语言中文网"
         >C语言中文网</a
-      ><br /><//a>
-        </a>
+      >
     </div>
   </body>
 </html>
-!-->
-<a
-        class="aliceblue-link"
-        href="HTML"
-        title="TITLE"
-        ></a
-      >
-      -->
